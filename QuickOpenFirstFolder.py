@@ -15,6 +15,5 @@ class PopupFirstFolderCommand(sublime_plugin.WindowCommand):
 		self.window.show_quick_panel(items, on_select=self.done)
 		
 	def done(self, result):
-		print(result)
 		if result >= 0:
 			self.window.open_file(items[result][1])
